@@ -5,7 +5,8 @@ var app = new Vue ({
     el: '#app',
     data: {
         single: '',
-        mailArray: []
+        mailArray: [],
+        nomeMittente: []
     },
     methods: {
         generaMail(){
@@ -15,6 +16,13 @@ var app = new Vue ({
                 .then((result) => {
                     
                     this.mailArray.push(result.data.response)
+                    console.log(this.mailArray);
+                })
+
+                axios.get("https://flynn.boolean.careers/exercises/api/random/name")
+                .then((result) => {
+
+                    this.nomeMittente.push(result.data.response);
                 })
             }
         }

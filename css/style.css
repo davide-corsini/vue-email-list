@@ -4,11 +4,20 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .container{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+/* general rulez */
+i{
+    color: #757575;
 }
 
 .header{
@@ -34,22 +43,42 @@
     margin-left: 25px;
 }
 .searchbar{
-    width: 55%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.contain-search{
+    width: 80%;
+    border: 1px solid #cdcdcd;
+    padding: 8px;
+    border-radius: 8px;
+}
+#cerca{
+    padding: 10px 8px;
+    width: 90%;
+    margin-left: 10px;
+    border: none;
+    outline: 0;
+}
 .options{
-    width: 25%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
 }
 .options ul{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.options ul li i{
+    font-size: 20px;;
 }
 
 
@@ -66,7 +95,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1%;
     background-color: lightgrey;
     overflow: hidden;
 }
@@ -80,12 +108,39 @@
     border-radius: 30px;
     display:flex;
     align-items: center;
+    margin-left: 15px;
+
 
 }
 ul.menu-col-sx{
     min-height: 50px;
     height: 400px;
-    background-color: brown;
+    background-color: white;
+    /* debug */
+    padding: 3%;
+    /* debug */
+    border-top: 1px solid lightslategrey;
+    border-bottom: 1px solid lightslategrey;
+}
+ul.menu-col-sx li{
+    line-height: 2.3;
+}
+ul.menu-col-sx li:hover {
+    background-color: #fce8e6;
+    color: #db392f;
+    cursor: pointer;
+}
+
+ul.menu-col-sx li:hover i{
+    color: #db392f;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+ul.menu-col-sx li span{
+    margin-right: 10px;
 }
 div.internal-scrivi{
     z-index: 2;
@@ -97,7 +152,18 @@ div.internal-scrivi{
 }
 
 
+.meet{
+    height: 80px;
+    width: 100%;
+        padding: 3%;
 
+}
+.hangouts{
+    height: 80px;
+    width: 100%;
+        padding: 3%;
+
+}
 
 
 div.profile-hang{
@@ -113,11 +179,17 @@ div.profile-hang{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: violet;
+    background-color: #a0c3ff;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin-right: 5px;
+    overflow-y: hidden;
+}
+
+.circle i{
+    color: #4374e0;
+    font-size: 28px;
 }
 
 
@@ -134,7 +206,6 @@ div.chats{
 .main-dx{
     width: 80%;
     height: 100%;
-    background-color: violet;
     display: flex;
     flex-direction: column;
 }
@@ -155,10 +226,9 @@ div.chats{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: lightskyblue;
 }
 
-.quadrato{
+.quadrato:hover{
     display: flex;
     align-items: center;
     padding: 5px;
@@ -183,5 +253,60 @@ ul.choice{
     display: flex;
     background-color: white;
     align-items: center;
+    justify-content: space-around;
+}
+ul.choice li{
+    flex-basis: calc(100% / 3);
+    border: 1px solid white;
+    padding: 1%;
+}
+ul.choice li:hover{
+    background-color: #fce8e6;
+    border-bottom: 2px solid #db392f;
+    cursor: pointer;
+    color:#db392f;
+    font-weight: 500;
+}
+ul.choice li:hover i{
+    color: #db392f;
+}
+ul.menu-active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+ul li.mail-row{
+    width: 100%;
+    display: flex;
+    line-height: 1.6;
+    padding: 5px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+ul li.mail-row:hover{
+    height: 70px;
+}
+
+li div.title-mail{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+li div.contenuto{
+    width: 30%;
+    height: 100%;
+    padding-left: 3%;
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+div.mail-checkbox{
+    width: 15%;
+    display: flex;
     justify-content: space-around;
 }
