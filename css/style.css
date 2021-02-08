@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: pink;
+}
+.logo img{
+    width: 50px;
+}
+.searchbar{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+}
+.options{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: tomato;
+}
+.options ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+.subcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.col-sx{
+    width: 20%;
+
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background-color: lightgrey;
+    overflow: hidden;
+}
+
+
+.scrivi{
+    margin: 10px 0;
+    width: 100px;
+    height: 50px;
+    box-shadow: 1px 3px 2px 1px rgba(0, 0, 0, 0.377); 
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+
+}
+ul.menu-col-sx{
+    min-height: 50px;
+    height: 400px;
+    background-color: brown;
+}
+div.internal-scrivi{
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://www.gstatic.com/images/icons/material/colored_icons/2x/create_32dp.png');
+}
+
+
+
+
+
+div.profile-hang{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+
+div.chats{
+    min-height: 200px;
+    max-height: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.404);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* end col-sx */
+.main-dx{
+    width: 80%;
+    height: 100%;
+    background-color: violet;
+}
