@@ -18,6 +18,7 @@
     <div id="app">
 
         <div class="container">
+            <!-- Inizio header -->
             <header>
                 <div class="row" >
                     <!-- logo -->
@@ -29,6 +30,7 @@
                     <!-- input reasearch -->
                     <div class="searchbar">
                         <div class="contain-search">
+
                             <i class="fas fa-search"></i>
                             <input id="cerca" type="text" placeholder="Cerca contatto nella posta">
                             <i class="fas fa-sort-down"></i>
@@ -55,8 +57,11 @@
                 </div>
 
             </header>
-            <main>
+            <!-- //end header -->
 
+            <!-- start main -->
+            <main>
+                <!-- start subcontainer -->
                 <div class="subcontainer">
                     <div class="col-sx">
                         <div class="scrivi">
@@ -91,6 +96,7 @@
                             <p><span style="margin-right: 8px;"><i class="fas fa-keyboard"></i></span>Partecipa a riunione</p>
                         </div>
 
+                        <!-- start hangouts -->
                         <div class="hangouts">
                             <h3 style="text-transform: capitalize;">hangouts</h3>
                             <div class="profile-hang">
@@ -104,7 +110,9 @@
 
                             </div>
                         </div>
+                        <!-- //end hangouts -->
 
+                        <!-- start chats -->
                         <div class="chats">
                             <div>
                                 <p>Nessuna chat recente</p>
@@ -112,8 +120,11 @@
                             </div>
                         </div>
                     </div>
-    
+                    <!-- //end chats -->
+                    
+                    <!-- start main-dx -->
                     <div class="main-dx">
+                        <!-- start main header -->
                         <div class="main-header">
                             <div class="select-all">
                                 <div class="quadrato">
@@ -126,7 +137,12 @@
                                 <div>
                                     <i class="fas fa-ellipsis-v"></i>
                                 </div>
+                                <div>
+                                </div>
                             </div>
+                            <p style="font-size: 12px;">
+                            *Clicca su principale per vedere le mail
+                            </p>
                             <div class="gestion">
                                 <div>
                                     <span>1-50di 82</span>
@@ -143,48 +159,64 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- //end main header -->
 
+
+                        <!-- start title -->
                         <div class="title">
+                            <!-- start scelta -->
                             <ul class="choice" style="list-style: none;">
                                 <li @click="generaMail"><i  class="fas fa-inbox" style="margin-right: 10px;"></i>Principale</li>
                                 <li><i class="fas fa-user-friends" style="margin-right: 10px;"></i>Social</li>
                                 <li><i class="fas fa-tag" style="margin-right: 10px;"></i>Promozioni</li>
                             </ul>
+                            <!-- //end scelta -->
                         </div>
+                        <!-- end title -->
 
+                        <!-- start posta -->
                         <div class="posta">
+                            <!-- start menu-active -->
                                 <ul  class="menu-active">
-                                    <li v-for=" mail in mailArray" class="mail-row" >
-                                        <div class="title-mail">
+                                    <li v-for="key in mailArray" class="mail-row"   >
+                                        <div class="title-mail" >
                                             <div class="mail-checkbox">
                                                 <input type="checkbox" name="" id="">
                                                 <i class="far fa-star"></i>
                                             </div>
-                                            <p style="padding-left: 5%;">
-                                                {{  mail    }}
+                                            
+                                            <p style="display: flex;">
+                                                {{ key.mail }}
+
+                                                
+                                                
+                                            </p>
+                                            <p>
+                                                {{ key.nome }}
+
+                                            </p>
+                                
+                                        </div>
+                                        
+                                        
+                                        <div style="background-color: lightgrey;" class="contenuto" >
+                                            <p style="background-color: violet;">
+                                                
                                             </p>
                                         </div>
-                                        <div class="contenuto" >
-                                        </div>
                                     </li>
-                                    
                                 </ul>
+                                <!-- //end menu-active -->
                         </div>
+                        <!-- // end posta -->
                     </div>
                 </div>
             </div>
-            
-
-    
-    
-            </main>    
+        
+        </main>
+        <!-- end main     -->
         
     </div>
-
-
-
-
-
     <script src="js/script.js"></script>
 </body>
 </html>
