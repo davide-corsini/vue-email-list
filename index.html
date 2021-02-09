@@ -166,7 +166,7 @@
                         <div class="title">
                             <!-- start scelta -->
                             <ul class="choice" style="list-style: none;">
-                                <li @click="generaMail"><i  class="fas fa-inbox" style="margin-right: 10px;"></i>Principale</li>
+                                <li><i  class="fas fa-inbox" style="margin-right: 10px;"></i>Principale</li>
                                 <li><i class="fas fa-user-friends" style="margin-right: 10px;"></i>Social</li>
                                 <li><i class="fas fa-tag" style="margin-right: 10px;"></i>Promozioni</li>
                             </ul>
@@ -187,23 +187,19 @@
                                             
                                             <p style="display: flex;">
                                                 {{ key.mail }}
-
                                                 
                                                 
                                             </p>
-                                            <p>
-                                                {{ key.nome }}
-
-                                            </p>
-                                
-                                        </div>
-                                        
-                                        
-                                        <div style="background-color: lightgrey;" class="contenuto" >
-                                            <p style="background-color: violet;">
+                                            
+                                            <p style="margin-left: 10px;">
+                                                {{key.nome}}
                                                 
                                             </p>
                                         </div>
+                                        
+                                        
+                                        <!-- <div style="background-color: lightgrey;" class="contenuto" >
+                                        </div> -->
                                     </li>
                                 </ul>
                                 <!-- //end menu-active -->
